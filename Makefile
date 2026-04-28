@@ -1,4 +1,4 @@
-.PHONY: up down backend streamlit logs clean
+.PHONY: up down restart backend streamlit logs clean
 
 # Spin up backend + Streamlit prototype
 up:
@@ -7,6 +7,11 @@ up:
 # Stop everything
 down:
 	docker compose down
+
+# Restart containers (stop + rebuild + start)
+restart:
+	docker compose down
+	docker compose up --build
 
 # Run backend only (FastAPI on http://localhost:8000)
 backend:
