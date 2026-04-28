@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./backend
+    container_name: watch4u-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - ./data:/data
+    restart: unless-stopped
+
+  streamlit:
+    build: ./streamlit_app
+    container_name: watch4u-streamlit
+    ports:
+      - "8501:8501"
+    env_file:
+      - ./streamlit_app/.env
+    volumes:
+      - ./streamlit_app:/app
+      - ./data:/data
+    depends_on:
+      - backend
+    restart: unless-stopped
