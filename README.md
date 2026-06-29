@@ -15,6 +15,18 @@ The current project is a Phase 1 prototype:
 
 The fall-detection demo uses pose keypoints to distinguish normal posture from fall-like movement. The webcam prototype displays live skeleton tracking and classifies each rolling pose window as `NO FALL` or `FALL`.
 
+## Prototype Visuals
+
+The A3 prototype includes a mobile monitoring concept and live CV fall-detection demo.
+
+| Live feeds | Active alert |
+| --- | --- |
+| <img src="docs/images/mobile-live-feeds.jpg" alt="Watch4U mobile live camera feeds" width="260"> | <img src="docs/images/mobile-active-alert.jpg" alt="Watch4U active fall alert screen" width="260"> |
+
+| No fall detected | Fall detected |
+| --- | --- |
+| <img src="docs/images/cv-demo-no-fall.jpg" alt="Watch4U CV demo showing no fall detected" width="360"> | <img src="docs/images/cv-demo-fall.jpg" alt="Watch4U CV demo showing a fall detected" width="360"> |
+
 ## Project Structure
 
 ```text
